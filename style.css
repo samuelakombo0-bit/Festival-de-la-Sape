@@ -112,5 +112,149 @@ h1{
     font-weight: 600;
     cursor: pointer;
 }
+.manifeste{
+    background: #111111; 
+    color: #fff;
+    text-align: center; 
+    padding: 100px 20px;
+    font-family: 'Inter', 'Poppins', sans-serif; 
+}
+
+.manifeste span{
+    display: block;
+    font-size: 12px;
+    letter-spacing: 3px; 
+    text-transform: uppercase;
+    color: yellowgreen; 
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.manifeste h2{
+    font-size: 2.8rem; 
+    font-weight: 800;
+    line-height: 1.3;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.manifeste p{
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.7); 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.programme{
+    position: relative;
+   background: linear-gradient(to right, rgba(0, 0, 0, 0.292), rgba(0,0,0,0.3) ), url(img/programme.jpg); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    padding: 100px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.date-badge{
+    display: inline-block;
+    background: rgba(255,255,255,0.1);
+    padding: 5px 15px;
+    font-size: 12px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.programme h2{
+    font-size: 3rem;
+    font-weight: 800;
+}
+.subtitle{
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 40px;
+}
 
 
+.tabs{
+    display: flex;
+    gap: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 30px;
+}
+.tab{
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.5);
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 15px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+.tab.active{
+    color: yellowgreen;
+    border-bottom: 2px solid yellowgreen;
+}
+
+/* Cartes */
+.event-card{
+    /* ton style actuel */
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    opacity: 0; 
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease; /* animation douce */
+}
+
+.event-card.show{ /* classe qu'on va ajouter avec JS */
+    opacity: 1; /* visible */
+    transform: translateY(0); /* revient à sa place */
+}
+.event-card:nth-child(1){ transition-delay: 0.1s; }
+.event-card:nth-child(2){ transition-delay: 0.2s; }
+.event-card:nth-child(3){ transition-delay: 0.3s; }
+
+.time{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: yellowgreen;
+    min-width: 80px;
+}
+.event-info h3{ font-size: 1.2rem; margin: 5px 0; }
+.event-info p{ font-size: 14px; color: rgba(255,255,255,0.7); }
+
+
+.tag{
+    font-size: 10px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+.tag-evenement{ background: rgba(121, 69, 243, 0.3); color: #845dfc; }
+.tag-sape{ background: rgba(216, 52, 134, 0.3); color: #f472b6; }
+.tag-concert{ background: rgba(20, 212, 91, 0.3); color: #4bf188; }
+
+/* Bouton */
+.btn-voir{
+    background: red;
+    color: #f9f503;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: 700;
+    margin: 40px auto 0;
+    display: block;
+    cursor: pointer;
+   
+}
