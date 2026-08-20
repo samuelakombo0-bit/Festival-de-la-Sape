@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -257,6 +257,348 @@ h1{
     display: block;
     cursor: pointer;
    
+}
+
+.visages{
+    background: #000;
+    color: #fff;
+    padding: 100px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+.container{ max-width: 1200px; margin: 0 auto; }
+.visages h2{ font-size: 2.5rem; font-weight: 800; }
+.subtitle{ color: rgba(255,255,255,0.6); margin-bottom: 40px; }
+
+/* FILTRES */
+.filters{
+    display: flex;
+    gap: 30px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 40px;
+}
+.filter-btn{
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.5);
+    font-weight: 600;
+    padding-bottom: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.filter-btn.active{
+    color: #FF6A3D;
+    border-bottom: 2px solid #FF6A3D;
+}
+
+/* GRILLE */
+.visages-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 80px;
+}
+.visage-card{
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.visage-card:hover{ transform: scale(1.03); }
+.visage-card img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+.visage-card .tag{
+    position: absolute;
+    top: 15px; left: 15px;
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+.tag-musique{ background: rgba(34,197,94,0.9); }
+.tag-sape{ background: rgba(236,72,153,0.9); }
+.tag-lumiere{ background: rgba(139,92,246,0.9); }
+.visage-card h3{
+    position: absolute;
+    bottom: 40px; left: 15px;
+    font-size: 1.2rem;
+}
+.visage-card p{
+    position: absolute;
+    bottom: 15px; left: 15px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+}
+
+/* BLOC ARTISTE */
+.artiste-honneur{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    background: rgba(255,255,255,0.03);
+    padding: 40px;
+    border-radius: 8px;
+}
+.artiste-honneur .label{ font-size: 12px; color: #FF6A3D; }
+.artiste-honneur h3{ font-size: 2rem; margin: 10px 0; }
+.btn-outline{
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.artiste-honneur img{ width: 100%; border-radius: 8px; }
+.experience-section{
+  background: #000;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  padding: 100px 20px;
+  text-align: center;
+}
+.container{ max-width: 1100px; margin: 0 auto; }
+
+.section-title{
+  font-size: 2.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+.section-subtitle{
+  color: rgba(255,255,255,0.6);
+  font-size: 14px;
+  margin-bottom: 60px;
+}
+
+/* CARTES */
+.pricing-cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 100px;
+}
+.card{
+  background: #0A0A0A;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 30px;
+  text-align: left;
+  position: relative;
+  transition: 0.3s;
+}
+.card:hover{ transform: translateY(-5px); }
+.card-featured{
+  border: 1px solid #FF9B7A;
+  box-shadow: 0 0 25px rgba(255,155,122,0.15);
+}
+.badge{
+  position: absolute;
+  top: 15px; right: 15px;
+  background: #FF6A3D;
+  color: #000;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 5px 10px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+}
+.card-label{ font-size: 12px; color: rgba(255,255,255,0.6); margin-bottom: 8px; }
+.card-price{ font-size: 2.8rem; font-weight: 900; margin-bottom: 25px; }
+.card-price span{ font-size: 1rem; font-weight: 400; }
+.card-features{ list-style: none; margin-bottom: 30px; }
+.card-features li{
+  font-size: 14px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.card-features li::before{
+  content: '✓';
+  color: #22c55e;
+  font-weight: 700;
+}
+
+/* BOUTONS */
+.btn{
+  width: 100%;
+  padding: 14px;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+}
+.btn-secondary{
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+}
+.btn-primary{
+  background: #FF9B7A;
+  color: #000;
+}
+.btn-big{ padding: 16px 50px; width: auto; margin-top: 30px; }
+
+/* ETAPES RESERVATION */
+.reservation-steps{ padding-top: 40px; }
+.steps-title{ font-size: 2rem; font-weight: 800; margin-bottom: 40px; }
+.steps-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 40px;
+}
+.alert-box{
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,193,7,0.3);
+  border-radius: 6px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 550px;
+  margin: 0 auto 20px;
+  font-size: 13px;
+}
+.info-text{ font-size: 13px; color: rgba(255,255,255,0.6); max-width: 600px; margin: 0 auto; }
+
+.partners-section{
+  background: #000;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  padding: 100px 20px;
+  text-align: center;
+  background-image: url('img/bg-festival.jpg'); /* ton image de fond floue */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.partners-section::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.85); /* voile noir */
+}
+.container{ max-width: 1100px; margin: 0 auto; position: relative; z-index: 2; }
+
+.section-title{
+  font-size: 2.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.1;
+}
+.section-subtitle{
+  color: rgba(255,255,255,0.6);
+  font-size: 14px;
+  margin: 10px 0 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* LOGOS PRINCIPAUX */
+.logos-main{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 60px;
+}
+.logo-box{
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+.logo-box img{ max-height: 50px; filter: grayscale(1) brightness(2); }
+
+/* GRILLE ICONS CENTRALE */
+.icons-grid{
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJElEQVQYV2NkYGD4z0AEYGFgYGBg+A8EwBAAIgAA//8DAK0BHZ4bG0cAAAAASUVORK5CYII=') repeat; /* fond damier transparent */
+  padding: 50px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+.icons-grid img{ width: 40px; opacity: 0.7; }
+
+/* 2 BLOCS DU BAS */
+.partners-grid-bottom{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+.partners-block{
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 30px;
+}
+.block-label{
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+  color: rgba(255,255,255,0.7);
+}
+.icons-small-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.icon-item{
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  border-radius: 6px;
+}
+.icon-item img{ width: 30px; opacity: 0.8; }
+.media-logos{ display: flex; justify-content: center; gap: 20px; }
+.media-logos img{ height: 40px; filter: grayscale(1) brightness(2); }
+
+/* CTA */
+.cta-partenaire h3{ font-size: 2rem; font-weight: 800; margin-bottom: 10px; }
+.cta-partenaire p{ color: rgba(255,255,255,0.6); margin-bottom: 25px; }
+.btn-partenaire{
+  background: #FF9B7A;
+  color: #000;
+  border: none;
+  padding: 14px 35px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media(max-width: 768px){
+  .logos-main{ grid-template-columns: 1fr 1fr; }
+  .partners-grid-bottom{ grid-template-columns: 1fr; }
+}
+@media(max-width: 768px){
+    .artiste-honneur{ grid-template-columns: 1fr; }
+    .steps-grid{ grid-template-columns: 1fr 1fr; }
+  .section-title{ font-size: 2rem; }
 }
 
  /* pourquoi ? */

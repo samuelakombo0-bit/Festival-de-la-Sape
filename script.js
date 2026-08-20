@@ -60,7 +60,7 @@ const programmes = {
         }
     ]
 };
-// le fonction des cartes 
+
 
 function afficherProgramme(jour){ 
     const list = document.querySelector('.programme-list');
@@ -116,3 +116,28 @@ function observerCartes() {
         observer.observe(card);
     });
 }
+
+const filterBtns = document.querySelectorAll('.filter-btn');
+const cards = document.querySelectorAll('.visage-card');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // 1. Gérer le bouton actif
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // 2. Récupérer le filtre
+        const filter = btn.getAttribute('data-filter'); 
+
+        // 3. Montrer/Cacher les cartes
+        cards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            
+            if(filter === 'all' || category === filter){
+                card.style.display = 'block'; // on montre
+            } else {
+                card.style.display = 'none'; // on cache
+            }
+        });
+    });
+});
