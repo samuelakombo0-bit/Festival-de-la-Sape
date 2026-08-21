@@ -122,14 +122,14 @@ const cards = document.querySelectorAll('.visage-card');
 
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-        // 1. Gérer le bouton actif
+       
         filterBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
-        // 2. Récupérer le filtre
+      
         const filter = btn.getAttribute('data-filter'); 
 
-        // 3. Montrer/Cacher les cartes
+       
         cards.forEach(card => {
             const category = card.getAttribute('data-category');
             
@@ -140,4 +140,33 @@ filterBtns.forEach(btn => {
             }
         });
     });
+});
+
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  const question = item.querySelector('.faq-question');
+  const answer = item.querySelector('.faq-answer');
+  const icon = item.querySelector('.icon');
+
+  question.addEventListener('click', () => {
+   
+    faqItems.forEach(otherItem => {
+      if(otherItem !== item){
+        otherItem.classList.remove('active');
+        otherItem.querySelector('.faq-answer').style.maxHeight = null;
+        otherItem.querySelector('.icon').textContent = '+';
+      }
+    });
+
+    
+    item.classList.toggle('active');
+    if(item.classList.contains('active')){
+      answer.style.maxHeight = answer.scrollHeight + "px";
+      icon.textContent = '-';
+    } else {
+      answer.style.maxHeight = null;
+      icon.textContent = '+';
+    }
+  });
 });

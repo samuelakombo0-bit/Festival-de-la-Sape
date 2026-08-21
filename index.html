@@ -10,15 +10,15 @@
     <header>
         <span>Sape & Lumière </span>
         <nav>
-            <a href="">acceuille</a>
-            <a href="">Programme </a>
-            <a href="">Lineup</a>
-            <a href="">Tikets</a>
-            <a href="">Partenaire</a>
-            <a href="">FAQ</a>
-            <a href="">Parlons-en </a>
+            <a href="#acceuille">acceuille</a>
+            <a href="#programme">Programme </a>
+            <a href="#lineup">Lineup</a>
+            <a href="#tikets">Tikets</a>
+            <a href="#Partenaire">Partenaire</a>
+            <a href="#Faq">FAQ</a>
+            <a href="#parlez">Parlons-en </a>
         </nav>
-        <button>Billeteries</button>
+        <a href="#tikets"><button >Billeteries</button></a>
     </header>
    
 <section class="accueil" id="accueil">
@@ -68,7 +68,7 @@
         <h2>LE PROGRAMME</h2>
         <p class="subtitle">Trois jours. Trois ambiances. Une seule expérience.</p>
 
-        <div class="tabs">
+        <div class="tabs" id="programme">
     <button class="tab active" data-day="vendredi">VENDREDI</button>
     <button class="tab" data-day="samedi">SAMEDI</button>
     <button class="tab" data-day="dimanche">DIMANCHE</button>
@@ -87,7 +87,7 @@
 
         <!-- FILTRES -->
         <div class="filters">
-            <button class="filter-btn active" data-filter="all">TOUS</button>
+            <button class="filter-btn active" data-filter="all" id="lineup">TOUS</button>
             <button class="filter-btn" data-filter="musique">MUSIQUE</button>
             <button class="filter-btn" data-filter="sape">MODE & SAPE</button>
             <button class="filter-btn" data-filter="lumiere">ART LUMIERE</button>
@@ -157,7 +157,7 @@
     <p class="section-subtitle">Vivez le festival à votre rythme. 2 options, 0 compromis sur le style.</p>
 
     <!-- CARTES PASS -->
-    <div class="pricing-cards">
+    <div class="pricing-cards" id="tikets">
       
       <!-- PASS 1 JOUR -->
       <div class="card">
@@ -175,7 +175,7 @@
       <!-- PASS 3 JOURS -->
       <div class="card card-featured">
         <span class="badge">RECOMMANDÉ</span>
-        <p class="card-label">PASS 3 JOURS</p>
+        <p class="card-label" id="Partenaire">PASS 3 JOURS</p>
         <h3 class="card-price">50 000 <span>FCFA</span></h3>
         <ul class="card-features">
           <li>Accès à tous les jours du festival</li>
@@ -219,10 +219,11 @@
 
     <!-- LOGOS PRINCIPAUX -->
     <div class="logos-main">
-      <div class="logo-box"><img src="img/logo1.png" alt="Partenaire 1"></div>
-      <div class="logo-box"><img src="img/logo2.png" alt="Partenaire 2"></div>
-      <div class="logo-box"><img src="img/logo3.png" alt="Partenaire 3"></div>
-      <div class="logo-box"><img src="img/logo4.png" alt="Partenaire 4"></div>
+      <div class="logo-box"><img src="img/logo (1).jpg" alt="Partenaire 1"></div>
+      <div class="logo-box"><img src="img/logo (2).jpg" alt="Partenaire 2"></div>
+      <div class="logo-box"><img src="img/logo (3).jpg" alt="Partenaire 3"></div>
+      <div class="logo-box"><img src="img/logo (4).jpg" alt="Partenaire 4"></div>
+      <div class="logo-box" id="akienie"><img src="img/logo.png" alt="Partenaire 4"></div>
     </div>
 
    
@@ -236,6 +237,174 @@
 
   </div>
 </section>
+<section class="faq-section">
+  <div class="container">
+    
+    <h2 class="section-title">QUESTIONS FRÉQUENTES</h2>
+    <p class="section-subtitle">Tout ce qu'il faut savoir avant de vivre l'expérience.</p>
+
+    <div class="faq-wrapper" id="Faq">
+      <!-- COLONNE GAUCHE -->
+      <div class="faq-left">
+        <h3>TU AS UNE <br>QUESTION ?</h3>
+        <p><span>NOUS AVONS <br>LA RÉPONSE.</span></p>
+      </div>
+
+      <!-- COLONNE DROITE : ACCORDEON -->
+      <div class="faq-right">
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            Quel est l'âge minimum ?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>L'accès au festival est autorisé dès 16 ans. Les mineurs doivent être accompagnés d'un adulte.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Y aura-t-il de la restauration sur place ?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Oui, plusieurs stands de restauration et bars seront disponibles sur le site du festival.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Y a-t-il un parking ?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Un parking gratuit est prévu à 200m de l'entrée principale du festival.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Le festival est-il en intérieur ou en extérieur ?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Le festival se déroule en extérieur avec des espaces couverts en cas d'intempéries.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Que se passe-t-il en cas de pluie ?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Le festival est maintenu. Des chapiteaux et ponchos seront disponibles.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Comment réserver mon Pass ?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Cliquez sur "Réserver mon Pass" et finalisez votre réservation via WhatsApp.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Puis-je venir uniquement un jour ?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Oui, nous proposons un Pass 1 jour à 25 000 FCFA.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Comment fonctionne la réservation WhatsApp ?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Après avoir cliqué, vous serez redirigé vers WhatsApp. Un agent confirmera votre réservation et le paiement se fera sur place.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CTA BAS -->
+    <div class="faq-cta">
+      <p>ENCORE UNE QUESTION ?</p>
+      <button class="btn-contact">NOUS CONTACTER</button>
+    </div>
+
+  </div>
+</section>
+<section class="contact-section">
+  <div class="container">
+    
+    <h2 class="section-title">PARLONS DU FESTIVAL</h2>
+    <p class="section-subtitle">Une question, une idée, une demande ? Notre équipe est là.</p>
+
+    <div class="contact-wrapper">
+      
+      <div class="contact-info">
+        <div class="image-overlay">
+          <h3>BRAZZAVILLE <br>NOUS ATTEND.</h3>
+        </div>
+        <div class="contact-details">
+          <p><span>📞</span> WHATSAPP: +242 06 957 94 03</p>
+          <p><span>✉️</span> contact@sapeetlumiere.cg</p>
+          <p><span>📍</span> Brazzaville, République du Congo</p>
+        </div>
+      </div>
+
+      <!-- COLONNE DROITE : FORMULAIRE -->
+      <div class="contact-form">
+        <form id="contactForm">
+          <div class="form-group" id="parlez">
+            <input type="text" placeholder="NOM " required>
+            <small class="error">O Veuillez renseigner votre nom.</small>
+          </div>
+          <div class="form-group">
+            <input type="tel" placeholder="TÉLÉPHONE " required>
+          </div>
+          <div class="form-group">
+            <textarea placeholder="MESSAGE *" rows="5" required></textarea>
+          </div>
+          
+          <div class="form-buttons">
+            <button type="submit" class="btn-primary">ENVOYER LE MESSAGE</button>
+            <a href="https://wa.me/242XXXXXXXX" target="_blank" class="btn-whatsapp">
+              <span>💬</span> NOUS ÉCRIRE SUR WHATSAPP
+            </a>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-container">
+    <h2 class="footer-logo">SAPE & <br>LUMIÈRE</h2>
+    
+    <div class="footer-links">
+      <a href="#">PRIVACY POLICY</a>
+      <a href="#">TERMS OF SERVICE</a>
+      <a href="#">PRESS KIT</a>
+      <a href="#">CONTACT</a>
+    </div>
+
+    <p class="footer-copy">© 2024 SAPE & LUMIÈRE. ARTISTRY IN MOTION.</p>
+  </div>
+</footer>
 <script src="script.js"></script>
 </body>
 </html>

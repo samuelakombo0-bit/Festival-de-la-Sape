@@ -40,6 +40,11 @@ header button{
     border: none;
     background-color: greenyellow;
 }
+header button:hover{
+    background-color: #118b3e25;
+    box-shadow: 0 0 15px 0 green;
+    color: #fff;
+}
 .accueil{
     height: 100vh;
     background-image: url(img/acceuille.png); 
@@ -247,7 +252,8 @@ h1{
 
 /* Bouton */
 .btn-voir{
-    background: red;
+    background: rgb(32, 98, 63);
+    backdrop-filter: blur(10px);
     color: #f9f503;
     border: none;
     padding: 12px 30px;
@@ -257,6 +263,10 @@ h1{
     display: block;
     cursor: pointer;
    
+}
+.btn-voir:hover{
+    background-color: #118b3e25;
+    box-shadow: 0 0 15px 0 green;
 }
 
 .visages{
@@ -287,8 +297,8 @@ h1{
     letter-spacing: 1px;
 }
 .filter-btn.active{
-    color: #FF6A3D;
-    border-bottom: 2px solid #FF6A3D;
+    color: greenyellow;
+    border-bottom: 2px solid greenyellow;
 }
 
 /* GRILLE */
@@ -345,7 +355,7 @@ h1{
     padding: 40px;
     border-radius: 8px;
 }
-.artiste-honneur .label{ font-size: 12px; color: #FF6A3D; }
+.artiste-honneur .label{ font-size: 12px; color: greenyellow; }
 .artiste-honneur h3{ font-size: 2rem; margin: 10px 0; }
 .btn-outline{
     background: none;
@@ -354,6 +364,10 @@ h1{
     padding: 10px 20px;
     margin-top: 20px;
     cursor: pointer;
+}
+.btn-outline:hover{
+    background-color: #118b3e63;
+    box-shadow: 0 0 15px 0 green;
 }
 .artiste-honneur img{ width: 100%; border-radius: 8px; }
 .experience-section{
@@ -396,13 +410,13 @@ h1{
 }
 .card:hover{ transform: translateY(-5px); }
 .card-featured{
-  border: 1px solid #FF9B7A;
+  border: 1px solid green;
   box-shadow: 0 0 25px rgba(255,155,122,0.15);
 }
 .badge{
   position: absolute;
   top: 15px; right: 15px;
-  background: #FF6A3D;
+  background: greenyellow;
   color: #000;
   font-size: 10px;
   font-weight: 800;
@@ -445,7 +459,7 @@ h1{
   color: #fff;
 }
 .btn-primary{
-  background: #FF9B7A;
+  background: green;
   color: #000;
 }
 .btn-big{ padding: 16px 50px; width: auto; margin-top: 30px; }
@@ -483,7 +497,7 @@ h1{
   font-family: 'Poppins', sans-serif;
   padding: 100px 20px;
   text-align: center;
-  background-image: url('img/bg-festival.jpg'); /* ton image de fond floue */
+  background-image: url('img/lumière\ \(2\).jpg'); /* ton image de fond floue */
   background-size: cover;
   background-position: center;
   position: relative;
@@ -492,7 +506,7 @@ h1{
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.85); /* voile noir */
+  background: rgba(0,0,0,0.85);
 }
 .container{ max-width: 1100px; margin: 0 auto; position: relative; z-index: 2; }
 
@@ -515,6 +529,7 @@ h1{
 .logos-main{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 100px; /* force la hauteur de chaque ligne */
   gap: 20px;
   margin-bottom: 60px;
 }
@@ -526,61 +541,21 @@ h1{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
 }
-.logo-box img{ max-height: 50px; filter: grayscale(1) brightness(2); }
+.logo-box img{ max-height: 80px; max-width: 100%; }
 
-/* GRILLE ICONS CENTRALE */
-.icons-grid{
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJElEQVQYV2NkYGD4z0AEYGFgYGBg+A8EwBAAIgAA//8DAK0BHZ4bG0cAAAAASUVORK5CYII=') repeat; /* fond damier transparent */
-  padding: 50px;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 60px;
+/* Le logo qui doit être grand */
+#akienie{
+    grid-column: span 4; 
+    height: auto; 
 }
-.icons-grid img{ width: 40px; opacity: 0.7; }
 
-/* 2 BLOCS DU BAS */
-.partners-grid-bottom{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  margin-bottom: 80px;
-}
-.partners-block{
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 8px;
-  padding: 30px;
-}
-.block-label{
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  margin-bottom: 20px;
-  color: rgba(255,255,255,0.7);
-}
-.icons-small-grid{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-}
-.icon-item{
-  background: rgba(255,255,255,0.05);
-  padding: 15px;
-  border-radius: 6px;
-}
-.icon-item img{ width: 30px; opacity: 0.8; }
-.media-logos{ display: flex; justify-content: center; gap: 20px; }
-.media-logos img{ height: 40px; filter: grayscale(1) brightness(2); }
 
 /* CTA */
 .cta-partenaire h3{ font-size: 2rem; font-weight: 800; margin-bottom: 10px; }
 .cta-partenaire p{ color: rgba(255,255,255,0.6); margin-bottom: 25px; }
 .btn-partenaire{
-  background: #FF9B7A;
+  background: yellowgreen;
   color: #000;
   border: none;
   padding: 14px 35px;
@@ -590,15 +565,211 @@ h1{
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
-@media(max-width: 768px){
-  .logos-main{ grid-template-columns: 1fr 1fr; }
-  .partners-grid-bottom{ grid-template-columns: 1fr; }
+.btn-partenaire:hover{
+    background-color: #118b3e25;
+    color: #fff;
+    box-shadow: 0 0 15px 0 green;
 }
+.faq-section{
+  background: #000;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  padding: 100px 20px;
+}
+.container{ max-width: 1100px; margin: 0 auto; }
+
+.section-title{ font-size: 2.5rem; font-weight: 900; text-transform: uppercase; }
+.section-subtitle{ color: rgba(255,255,255,0.6); margin-bottom: 60px; }
+
+.faq-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* GAUCHE */
+.faq-left h3{
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+.faq-left p span{
+  color: greenyellow; /* orange */
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+/* DROITE : ACCORDEON */
+.faq-item{
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.faq-question{
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  text-align: left;
+  padding: 20px 0;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.faq-question .icon{
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+.faq-item.active .icon{ transform: rotate(45deg); } /* + devient x */
+
+.faq-answer{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.faq-answer p{
+  padding-bottom: 20px;
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* CTA BAS */
+.faq-cta{ text-align: center; margin-top: 80px; }
+.faq-cta p{ font-weight: 700; margin-bottom: 15px; }
+.btn-contact{
+  background: yellowgreen;
+  color: #000;
+  border: none;
+  padding: 14px 35px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.btn-contact:hover{
+    background-color: #118b3e25;
+    color: #fff;
+    box-shadow: 0 0 15px 0 green;
+}
+.contact-section, .footer{
+  background: #000;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  padding: 100px 20px 0;
+}
+.container{ max-width: 1100px; margin: 0 auto; }
+
+.section-title{ font-size: 2.8rem; font-weight: 900; text-transform: uppercase; }
+.section-subtitle{ color: rgba(255,255,255,0.6); margin-bottom: 60px; }
+
+/* CONTACT WRAPPER */
+.contact-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* GAUCHE */
+.contact-info{
+  background: url('img/lumière\ \(3\).jpg') center/cover no-repeat; /* ta photo */
+  border-radius: 8px;
+  padding: 30px;
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contact-info::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 100%);
+  border-radius: 8px;
+}
+.image-overlay, .contact-details{ position: relative; z-index: 2; }
+.image-overlay h3{ font-size: 2.2rem; font-weight: 800; }
+.contact-details p{ margin-bottom: 12px; font-size: 14px; display: flex; align-items: center; gap: 10px; }
+.contact-details span{ color: #441aae; }
+
+/* DROITE FORMULAIRE */
+.form-group{ margin-bottom: 20px; }
+.form-group input, .form-group textarea{
+  width: 100%;
+  background: #fff;
+  border: none;
+  padding: 14px;
+  font-size: 14px;
+  color: #000;
+  font-family: 'Poppins';
+}
+.form-group input::placeholder, .form-group textarea::placeholder{
+  color: #999;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.error{ color: #e90303; font-size: 12px; display: block; margin-top: 5px; }
+
+.form-buttons{ display: flex; gap: 15px; align-items: center; }
+.btn-primary{
+  background:green;
+  color: #fff;
+  border: none;
+  padding: 14px 25px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.btn-primary:hover{
+    background-color: #118b3e25;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px 0 green;
+}
+.btn-whatsapp{
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  padding: 14px 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* FOOTER */
+.footer{ padding: 60px 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+.footer-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.footer-logo{ font-size: 1.8rem; font-weight: 900; line-height: 1.1; }
+.footer-links{ display: flex; gap: 25px; flex-wrap: wrap; }
+.footer-links a{
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  font-size: 12px;
+}
+.footer-copy{ color: rgba(255,255,255,0.5); font-size: 12px; }
+
 @media(max-width: 768px){
     .artiste-honneur{ grid-template-columns: 1fr; }
     .steps-grid{ grid-template-columns: 1fr 1fr; }
   .section-title{ font-size: 2rem; }
+  .logos-main{ grid-template-columns: 1fr 1fr; }
+  .partners-grid-bottom{ grid-template-columns: 1fr; }
+    .faq-wrapper{ grid-template-columns: 1fr; }
+  .faq-left h3, .faq-left p span{ font-size: 1.8rem; }
+  .contact-wrapper{ grid-template-columns: 1fr; }
+  .form-buttons{ flex-direction: column; align-items: stretch; }
+  .footer-container{ flex-direction: column; text-align: center; }
 }
 
  /* pourquoi ? */
