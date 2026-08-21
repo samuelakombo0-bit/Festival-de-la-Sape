@@ -8,18 +8,28 @@
 </head>
 <body>
     <header>
-        <span>Sape & Lumière </span>
-        <nav>
-            <a href="#acceuille">acceuille</a>
-            <a href="#programme">Programme </a>
-            <a href="#lineup">Lineup</a>
-            <a href="#tikets">Tikets</a>
-            <a href="#Partenaire">Partenaire</a>
-            <a href="#Faq">FAQ</a>
-            <a href="#parlez">Parlons-en </a>
-        </nav>
-        <a href="#tikets"><button >Billeteries</button></a>
-    </header>
+    <span>Sape & Lumière</span>
+
+    <!-- BOUTON HAMBURGER -->
+    <button class="menu-toggle" aria-label="Ouvrir le menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+
+    <nav>
+        <a href="#acceuille">Accueil</a>
+        <a href="#programme">Programme</a>
+        <a href="#lineup">Lineup</a>
+        <a href="#tikets">Tickets</a>
+        <a href="#Partenaire">Partenaire</a>
+        <a href="#Faq">FAQ</a>
+        <a href="#parlez">Parlons-en</a>
+        <a href="#tikets" class="btn-mobile">Billeterie</a>
+    </nav>
+
+    <a href="#tikets" class="btn-desktop"><button>Billeterie</button></a>
+</header>
    
 <section class="accueil" id="accueil">
     <div class="overlay"></div>
@@ -64,7 +74,7 @@
     <div class="overlay"></div>
     
     <div class="container">
-        <span class="date-badge">15 — 17 AOÛT 2026</span>
+        <span class="date-badge">20 — 23 AOÛT 2026</span>
         <h2>LE PROGRAMME</h2>
         <p class="subtitle">Trois jours. Trois ambiances. Une seule expérience.</p>
 
@@ -368,7 +378,7 @@
         <form id="contactForm">
           <div class="form-group" id="parlez">
             <input type="text" placeholder="NOM " required>
-            <small class="error">O Veuillez renseigner votre nom.</small>
+            
           </div>
           <div class="form-group">
             <input type="tel" placeholder="TÉLÉPHONE " required>
@@ -379,7 +389,7 @@
           
           <div class="form-buttons">
             <button type="submit" class="btn-primary">ENVOYER LE MESSAGE</button>
-            <a href="https://wa.me/242XXXXXXXX" target="_blank" class="btn-whatsapp">
+            <a href="https://wa.me/242069579403" target="_blank" class="btn-whatsapp">
               <span>💬</span> NOUS ÉCRIRE SUR WHATSAPP
             </a>
           </div>

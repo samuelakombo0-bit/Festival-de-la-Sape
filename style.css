@@ -9,26 +9,28 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 10px;
+    padding: 15px 30px;
     background-color: rgb(12, 4, 4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 header span{
     font-family: "Space Grotesk", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-  font-size: 30px;
-  color: aliceblue;
-  padding: 10px;
+    font-weight: 700;
+    font-size: 30px;
+    color: aliceblue;
 }
 header nav {
     display: flex;
     gap: 30px;
+    align-items: center;
 }
 header nav a {
     text-decoration: none;
     color: aliceblue;
-    transition: 1s ease;
+    font-weight: 500;
+    transition: 0.3s ease;
 }
 header nav a:hover{
     text-decoration: overline;
@@ -36,15 +38,22 @@ header nav a:hover{
 }
 header button{
     height: 40px;
-    width: 100px;
+    width: 120px;
     border: none;
     background-color: greenyellow;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
 }
 header button:hover{
-    background-color: #118b3e25;
+    background-color: #118b3e;
     box-shadow: 0 0 15px 0 green;
     color: #fff;
 }
+
+/* CACHER LE HAMBURGER SUR DESKTOP */
+.menu-toggle{ display: none; }
+.btn-mobile{ display: none; }
 .accueil{
     height: 100vh;
     background-image: url(img/acceuille.png); 
@@ -770,6 +779,53 @@ h1{
   .contact-wrapper{ grid-template-columns: 1fr; }
   .form-buttons{ flex-direction: column; align-items: stretch; }
   .footer-container{ flex-direction: column; text-align: center; }
+}
+@media(max-width: 900px){
+    .btn-desktop{ display: none; } /* cache le bouton desktop */
+
+    .menu-toggle{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        width: auto;
+        height: auto;
+    }
+    .menu-toggle .bar{
+        width: 25px;
+        height: 3px;
+        background-color: aliceblue;
+        transition: 0.3s;
+    }
+
+    /* MENU QUI GLISSE */
+    header nav{
+        position: fixed;
+        top: 70px;
+        right: -100%; /* caché par défaut */
+        flex-direction: column;
+        background: #0c0404;
+        width: 70%;
+        height: 100vh;
+        padding: 40px 20px;
+        gap: 25px;
+        align-items: flex-start;
+        transition: right 0.4s ease;
+        border-left: 1px solid rgba(255,255,255,0.1);
+    }
+    header nav.active{
+        right: 0; /* s'affiche */
+    }
+
+    .btn-mobile{ display: block; } /* montre le bouton dans le menu */
+    .btn-mobile button{ width: 100%; }
+    
+    /* ANIMATION DU HAMBURGER EN X */
+    .menu-toggle.active .bar:nth-child(1){ transform: rotate(45deg) translate(5px, 5px); }
+    .menu-toggle.active .bar:nth-child(2){ opacity: 0; }
+    .menu-toggle.active .bar:nth-child(3){ transform: rotate(-45deg) translate(7px, -6px); }
 }
 
  /* pourquoi ? */
