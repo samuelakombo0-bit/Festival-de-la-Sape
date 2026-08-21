@@ -50,10 +50,9 @@ header button:hover{
     box-shadow: 0 0 15px 0 green;
     color: #fff;
 }
-
-/* CACHER LE HAMBURGER SUR DESKTOP */
 .menu-toggle{ display: none; }
 .btn-mobile{ display: none; }
+
 .accueil{
     height: 100vh;
     background-image: url(img/acceuille.png); 
@@ -780,7 +779,7 @@ h1{
   .form-buttons{ flex-direction: column; align-items: stretch; }
   .footer-container{ flex-direction: column; text-align: center; }
 }
-@media(max-width: 900px){
+@media(max-width: 1024px){
     .btn-desktop{ display: none; } /* cache le bouton desktop */
 
     .menu-toggle{
@@ -808,6 +807,7 @@ h1{
         flex-direction: column;
         background: #0c0404;
         width: 70%;
+        max-width: 350px;
         height: 100vh;
         padding: 40px 20px;
         gap: 25px;
@@ -820,12 +820,10 @@ h1{
     }
 
     .btn-mobile{ display: block; } /* montre le bouton dans le menu */
-    .btn-mobile button{ width: 100%; }
     
     /* ANIMATION DU HAMBURGER EN X */
     .menu-toggle.active .bar:nth-child(1){ transform: rotate(45deg) translate(5px, 5px); }
     .menu-toggle.active .bar:nth-child(2){ opacity: 0; }
     .menu-toggle.active .bar:nth-child(3){ transform: rotate(-45deg) translate(7px, -6px); }
 }
-
  /* pourquoi ? */
