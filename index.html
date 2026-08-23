@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-    <span>Sape & Lumière</span>
+    <span >Sape & Lumière</span>
 
     <!-- BOUTON HAMBURGER -->
     <button class="menu-toggle" aria-label="Ouvrir le menu">
@@ -33,20 +33,20 @@
    
 <section class="accueil" id="accueil">
     <div class="overlay"></div>
-    <div class="hero">
+    <div class="hero" id="acceuille">
         <span class="location">BRAZZAVILLE — RÉPUBLIQUE DU CONGO 🇨🇬</span>
-        <h1>FESTIVAL <br> <span class="orange">SAPE &</span> LUMIÈRE</h1>
+        <h1>FESTIVAL <br > <span class="orange">SAPE &</span> LUMIÈRE</h1>
         <p>3 jours de style, de musique et de lumière.</p>
-        <p class="date">📅 15 — 17 AOÛT 2026</p>
+        <p class="date">📅 21 — 24 AOÛT 2026</p>
 
         <div class="countdown">
-            <div><span>00</span><small>JOURS</small></div>
+            <div><span id="days">00</span><small>JOURS</small></div>
             <div><span>:</span></div>
-            <div><span>00</span><small>HEURES</small></div>
+            <div><span id="hours">00</span><small>HEURES</small></div>
+            <div><span >:</span></div>
+            <div><span id="minutes">00</span><small>MINUTES</small></div>
             <div><span>:</span></div>
-            <div><span>00</span><small>MINUTES</small></div>
-            <div><span>:</span></div>
-            <div><span class="orange">00</span><small>SECONDES</small></div>
+            <div><span class="orange" id="seconds">00</span><small>SECONDES</small></div>
         </div>
 
         <div class="btns">
@@ -74,7 +74,7 @@
     <div class="overlay"></div>
     
     <div class="container">
-        <span class="date-badge">20 — 23 AOÛT 2026</span>
+        <span class="date-badge">21 — 24  AOÛT 2026</span>
         <h2>LE PROGRAMME</h2>
         <p class="subtitle">Trois jours. Trois ambiances. Une seule expérience.</p>
 
@@ -106,12 +106,7 @@
         <!-- GRILLE DES CARTES -->
         <div class="visages-grid">
             <!-- Carte 1 -->
-            <div class="visage-card" data-category="musique">
-                <img src="img/HIMRA.jpg" alt="Kaya M.">
-                <span class="tag tag-musique">MUSIQUE</span>
-                <h3>Himara </h3>
-                <p>Artiste Urbaine Ivorienne </p>
-            </div>
+            
 
             <!-- Carte 2 -->
             <div class="visage-card" data-category="sape">
@@ -129,13 +124,33 @@
                 <p>Installation interactive</p>
             </div>
 
+              <div class="visage-card" data-category="lumiere">
+                <img src="img/badouin.jpeg" alt="Lumière Noire Studio">
+                <span class="tag tag-lumiere"> Photographe et artiste visuel</span>
+                <h3>Baudouin Mouanda </h3>
+                <p>Photographie, art contemporain</p>
+            </div>
+
             <!-- Carte 4 -->
             <div class="visage-card" data-category="musique">
-                <img src="img/Koba la D.jpg" alt="Noki">
+                <img src="img/Niska.jpg" alt="Noki">
                 <span class="tag tag-musique">MUSIQUE</span>
-                <h3>Koba La D</h3>
-                <p>Artiste compositeur </p>
+                <h3>Niska</h3>
+                <p>Artiste, Rappeur compositeur </p>
             </div>
+            <div class="visage-card" data-category="musique">
+                <img src="img/roga roga.jpeg" alt="Noki">
+                <span class="tag tag-musique">MUSIQUE</span>
+                <h3>Roga Roga  D</h3>
+                <p>Musicien </p>
+            </div>
+            <div class="visage-card" data-category="musique">
+                <img src="img/keblack.jpeg" alt="Noki">
+                <span class="tag tag-musique">MUSIQUE</span>
+                <h3>KeBlack </h3>
+                <p>chanteur, rappeur et acteur </p>
+            </div>
+            
 
             <!-- Carte 5 -->
             <div class="visage-card" data-category="sape">
@@ -143,6 +158,13 @@
                 <span class="tag tag-sape">MODE & SAPE</span>
                 <h3>Maison M'Boko</h3>
                 <p>Styliste Créateur</p>
+            </div>
+        </div>
+         <div class="visage-card" data-category="sape">
+                <img src="img/ben moukasha.jpeg" alt="Maison M'Boko">
+                <span class="tag tag-sape">MODE & SAPE</span>
+                <h3>Ben Moukacha </h3>
+                <p>Figure de la SAPE Congolaise</p>
             </div>
         </div>
 
@@ -185,7 +207,7 @@
       <!-- PASS 3 JOURS -->
       <div class="card card-featured">
         <span class="badge">RECOMMANDÉ</span>
-        <p class="card-label" id="Partenaire">PASS 3 JOURS</p>
+        <p class="card-label" >PASS 3 JOURS</p>
         <h3 class="card-price">50 000 <span>FCFA</span></h3>
         <ul class="card-features">
           <li>Accès à tous les jours du festival</li>
@@ -194,7 +216,7 @@
           <li>Invitation au défilé Sape VIP</li>
           <li>Expérience complète + goodies</li>
         </ul>
-        <button class="btn btn-primary">RÉSERVER MON PASS</button>
+       <a href="#tikets"> <button class="btn btn-primary">RÉSERVER MON PASS</button></a>
       </div>
 
     </div>
@@ -216,7 +238,7 @@
 
       <p class="info-text">Pas de paiement en ligne ? Aucun problème. La réservation se fait via WhatsApp et le paiement sur place.</p>
       
-      <button class="btn btn-primary btn-big">RÉSERVER MON PASS</button>
+     <a href="#tikets"> <button class="btn btn-primary btn-big">RÉSERVER MON PASS</button></a>
     </div>
 
   </div>
@@ -228,7 +250,7 @@
     <p class="section-subtitle">Nos partenaires principaux</p>
 
     <!-- LOGOS PRINCIPAUX -->
-    <div class="logos-main">
+    <div class="logos-main" id="Partenaire">
       <div class="logo-box"><img src="img/logo (1).jpg" alt="Partenaire 1"></div>
       <div class="logo-box"><img src="img/logo (2).jpg" alt="Partenaire 2"></div>
       <div class="logo-box"><img src="img/logo (3).jpg" alt="Partenaire 3"></div>
@@ -242,7 +264,7 @@
     <div class="cta-partenaire">
       <h3>DEVENIR PARTENAIRE</h3>
       <p>Rejoignez l'aventure et faites briller la culture congolaise</p>
-      <button class="btn-partenaire">NOUS CONTACTER</button>
+      <a href="#parlez"><button class="btn-partenaire">NOUS CONTACTER</button></a>
     </div>
 
   </div>
@@ -406,13 +428,16 @@
     <h2 class="footer-logo">SAPE & <br>LUMIÈRE</h2>
     
     <div class="footer-links">
-      <a href="#">PRIVACY POLICY</a>
-      <a href="#">TERMS OF SERVICE</a>
-      <a href="#">PRESS KIT</a>
-      <a href="#">CONTACT</a>
+        <a href="#acceuille">Accueil</a>
+        <a href="#programme">Programme</a>
+        <a href="#lineup">Lineup</a>
+        <a href="#tikets">Tickets</a>
+        <a href="#Partenaire">Partenaire</a>
+        <a href="#Faq">FAQ</a>
+        <a href="#parlez">Parlons-en</a>
     </div>
 
-    <p class="footer-copy">© 2024 SAPE & LUMIÈRE. ARTISTRY IN MOTION.</p>
+    <p class="footer-copy">© 2026 SAPE & LUMIÈRE.</p>
   </div>
 </footer>
 <script src="script.js"></script>

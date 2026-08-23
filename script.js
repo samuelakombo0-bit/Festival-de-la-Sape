@@ -1,5 +1,29 @@
 
+// DATE DE FIN = AUJOURD'HUI + 3 JOURS
+const countDownDate = new Date().getTime() + (3 * 24 * 60 * 60 * 1000);
 
+const timer = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = countDownDate - now;
+
+    // Calculs
+    const days = Math.floor(distance / (800 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Affichage avec 0 devant
+    document.getElementById("days").innerHTML = String(days).padStart(2, '0');
+    document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+    document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+    document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+    // Quand c'est fini
+    if (distance < 0) {
+        clearInterval(timer);
+        document.querySelector(".countdown").innerHTML = "<span>LE COMPTE A REBOURS EST TERMINE</span>";
+    }
+}, 1000);
 
 
 // 1. On stocke tous les programmes dans un objet
